@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 import "../App.css";
 
-export default function NavBar({ movies }) {
+export default function NavBar({ children }) {
   const [query, setQuery] = useState("");
 
   return (
     <nav className="nav-bar">
       <Logo />
       <SearchBar query={query} onQueryUpdate={setQuery} />
-      <Results movies={movies} />
+      {children}
     </nav>
   );
 }

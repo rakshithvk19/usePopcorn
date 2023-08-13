@@ -2,13 +2,13 @@ import { useState } from "react";
 import React from "react";
 import "../App.css";
 
-export default function MovieList({ movies }) {
-  const [isOpen1, setIsOpen1] = useState(true);
+export default function Box({ movies }) {
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="box">
-      <Btn isOpen1={isOpen1} setIsOpen1={setIsOpen1} />
-      {isOpen1 && (
+      <Btn isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen && (
         <ul className="list">
           {movies?.map((movie) => (
             <MovieEl movie={movie} key={movie.imdbID} />
@@ -16,14 +16,6 @@ export default function MovieList({ movies }) {
         </ul>
       )}
     </div>
-  );
-}
-
-function Btn({ isOpen1, setIsOpen1 }) {
-  return (
-    <button className="btn-toggle" onClick={() => setIsOpen1((open) => !open)}>
-      {isOpen1 ? "–" : "+"}
-    </button>
   );
 }
 
