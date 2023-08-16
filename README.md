@@ -20,5 +20,17 @@
 - Here is your key: 475999e8
 
 - useEffect Hooks
+
   - dependency array
   - stale Closure
+
+- whenever the initial value of useState() depends on some computation, the pass in a function as the parameter of the useState instead of calling the function as the parameter of useState()
+- called LAZY EVALUATION
+- has to be a pure function.
+
+  - why?
+
+- useRef() hook to manipulate DOM Elements.
+- useRef() hook to persist data btw renders.
+
+- customHooks() -- used when logic that contain hooks needs to be reused.
