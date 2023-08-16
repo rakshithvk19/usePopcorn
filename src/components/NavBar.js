@@ -1,15 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import "../App.css";
 
-export default function NavBar({ children }) {
-  const [query, setQuery] = useState("");
-
+export default function NavBar({ query, onQueryUpdate, movies }) {
   return (
     <nav className="nav-bar">
       <Logo />
-      <SearchBar query={query} onQueryUpdate={setQuery} />
-      {children}
+      <SearchBar query={query} onQueryUpdate={onQueryUpdate} />
+      <Results movies={movies} />
     </nav>
   );
 }
@@ -38,7 +35,7 @@ function SearchBar({ query, onQueryUpdate }) {
 function Results({ movies }) {
   return (
     <p className="num-results">
-      Found <strong>{movies.length}</strong> results
+      Found <strong>{movies?.length}</strong> results
     </p>
   );
 }
