@@ -17,7 +17,6 @@
   - Solutions: 1.) Component Composition. -- combining different components using children props.
     - used in situations such as 1.) Creating highly reusable and flexible components. 2.) Fixing prop drilling.
 
-- Here is your key: 475999e8
 
 - useEffect Hooks
 
