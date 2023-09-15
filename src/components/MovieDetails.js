@@ -105,7 +105,7 @@ export default function MovieDetails({
       title,
       year,
       poster,
-      runtime: Number(runtime.split("").at(0)),
+      runtime: Number(runtime.split(" ").at(0)),
       imdbRating: Number(imdbRating),
       userRating,
     };
