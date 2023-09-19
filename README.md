@@ -32,3 +32,5 @@
 - useRef() hook to persist data btw renders.
 
 - customHooks() -- used when logic that contain hooks needs to be reused.
+
+# Updated README.md
